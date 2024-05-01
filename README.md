@@ -1,6 +1,5 @@
-# CS 4660 CTF Project
-
-# Authors
-
 Ethan Ford
-Nathan Freestone
+
+
+Run "npm i"
+Run "npm run dev"
