@@ -1,0 +1,6 @@
+.logo {
+  display: flex;
+  font-size: 3rem;
+  padding: 2rem;
+  font-family: "MyFont", "Tilt Neon", sans-serif; /* Fallback to sans-serif font */
+}
