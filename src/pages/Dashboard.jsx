@@ -38,10 +38,9 @@ import { createClient } from "@supabase/supabase-js";
 import { useState, useEffect } from "react";
 
 export default function Dashboard({ token }) {
-  const supbaseUrl = "https://cduizgpxirkaahnlnaip.supabase.co";
-  const supabaseKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNkdWl6Z3B4aXJrYWFobmxuYWlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTI2ODU1OTQsImV4cCI6MjAyODI2MTU5NH0.d_SQIqyRo6_dxN85nZlinEPDsoac4h2cH0XBKDA5YJE";
-  const supabase = createClient(supbaseUrl, supabaseKey);
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+  const supabaseKey = import.meta.env.VITE_SUPABASE_KEY
+  const supabase = createClient(supabaseUrl, supabaseKey)
   const navigate = useNavigate();
   const [accounts, setAccounts] = useState([]);
   function handleLogout() {
